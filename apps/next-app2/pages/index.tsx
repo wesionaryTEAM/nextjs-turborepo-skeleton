@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h3>Next App 2</h3>
+        <h3 className="text-3xl font-bold underline">Next App 2</h3>
         <Button />
       </main>
 
