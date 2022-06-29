@@ -12,6 +12,7 @@
     "app:next-app1": "turbo run dev --filter=next-app1",
     "app:next-app2": "turbo run dev --filter=next-app2",
     "lint": "turbo run lint",
+    "lint-staged": "lint-staged",
     "lint:app:next-app1": "turbo run lint --filter=next-app1",
     "lint:app:next-app2": "turbo run lint --filter=next-app2",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -28,6 +29,7 @@
   ],
   "devDependencies": {
     "eslint-config-custom": "latest",
+    "pre-commit": "^1.2.2",
     "prettier": "latest",
     "turbo": "latest"
   },
@@ -35,6 +37,8 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lint-staged": "^13.0.3"
+  },
   "packageManager": "yarn@1.22.18"
 }
