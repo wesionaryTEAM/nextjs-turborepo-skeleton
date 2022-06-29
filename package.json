@@ -9,9 +9,23 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "app:next-app1": "turbo run dev --filter=next-app1",
+    "app:next-app2": "turbo run dev --filter=next-app2",
     "lint": "turbo run lint",
+    "lint:app:next-app1": "turbo run lint --filter=next-app1",
+    "lint:app:next-app2": "turbo run lint --filter=next-app2",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "yarn format",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
   "devDependencies": {
     "eslint-config-custom": "latest",
     "prettier": "latest",
