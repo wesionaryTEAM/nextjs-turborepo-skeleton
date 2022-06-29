@@ -18,9 +18,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "yarn lint",
-      "yarn format"
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
     ]
   },
   "pre-commit": [

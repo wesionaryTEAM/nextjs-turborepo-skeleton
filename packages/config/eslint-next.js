@@ -1,18 +1,17 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    node: true,
   },
   extends: [
     'next',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:import/recommended',
     'plugin:import/typescript',
     'prettier',
   ],
+  plugins: ['@typescript-eslint', 'import'],
   settings: {
     next: {
       rootDir: ['apps/*/', 'packages/*/'],
@@ -27,39 +26,48 @@ module.exports = {
       },
     },
   },
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
-    'react/prop-types': 'off',
-    '@typescript-eslint/ban-ts-comment': 0,
-    '@typescript-eslint/no-non-null-assertion': 0,
-    'cypress/no-unnecessary-waiting': 0,
-    'no-console': 'error',
-    'no-alert': 'error',
-    '@typescript-eslint/no-explicit-any': 0,
-    'react/display-name': 0,
-    'react-hooks/exhaustive-deps': 0,
-    'sort-imports': 'off',
-    'prettier/prettier': 'error',
-    'import/first': 'error',
-    'import/no-duplicates': 'error',
-    'react/jsx-no-target-blank': 0,
-    'no-unused-vars': 'error',
-    'no-useless-return': 'error',
-    'no-return-await': 'error',
-    'no-else-return': 'error',
-    '@typescript-eslint/no-var-requires': 0,
-    'no-async-promise-executor': 0,
-    'import/no-named-as-default': 0,
-    '@typescript-eslint/explicit-module-boundary-types': 0,
-    'react/jsx-uses-react': 0,
-    'react/react-in-jsx-scope': 0,
+    // react
+    'react/function-component-definition': [
+      'off',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'react/jsx-props-no-spreading': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/button-has-type': 'off',
+
+    'import/prefer-default-export': 'off',
+    // next
+    '@next/next/no-html-link-for-pages': 'off',
   },
-};
+  overrides: [
+    {
+      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
+      env: {
+        jest: true,
+      },
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react', 'plugin:jest/recommended'],
+      rules: {
+        'import/no-extraneous-dependencies': [
+          'off',
+          { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
+        ],
+      },
+    },
+  ],
+  ignorePatterns: [
+    '**/*.js',
+    '**/*.json',
+    'node_modules',
+    'public',
+    'styles',
+    '.next',
+    'coverage',
+    'dist',
+    '.turbo',
+  ],
+}
