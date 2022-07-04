@@ -15,7 +15,8 @@
     "lint-staged": "lint-staged",
     "lint:app:next-app1": "turbo run lint --filter=next-app1",
     "lint:app:next-app2": "turbo run lint --filter=next-app2",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo run clean && rm -rf node_modules"
   },
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [

@@ -1,12 +1,9 @@
-/** @type {import('tailwindcss').Config} */
+const Themes = require('ui/Themes/index')
+console.log('Themes', Themes)
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    '../../packages/ui/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {},
+  ...require('config/tailwind.config'),
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [{ ...Themes }],
   },
-  plugins: [],
-};
+}

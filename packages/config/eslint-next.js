@@ -42,6 +42,15 @@ module.exports = {
     'import/prefer-default-export': 'off',
     // next
     '@next/next/no-html-link-for-pages': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'react/require-default-props': 'off',
+    'import/no-extraneous-dependencies': [
+      'off',
+      { devDependencies: ['**/?(*.)+(spec|test).[jt]s?(x)'] },
+    ],
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/no-noninteractive-tabindex': 'off',
   },
   overrides: [
     {
