@@ -8,7 +8,17 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-links',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false,
+      },
+    },
     '@storybook/addon-essentials',
+    '@storybook/addon-storysource',
+    'storybook-addon-themes',
+    'storybook-addon-themes',
+    'storybook-addon-theme-changer',
     {
       name: '@storybook/addon-postcss',
       options: {

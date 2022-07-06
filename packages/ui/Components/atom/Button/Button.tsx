@@ -3,5 +3,5 @@ export interface IButtonProps {
 }
 
 export const Button = ({ label }: IButtonProps) => (
-  <button className="btn bg-red-600">{label}</button>
+  <button className="btn btn-primary">{label}</button>
 )
