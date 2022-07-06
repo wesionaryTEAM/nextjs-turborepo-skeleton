@@ -16,7 +16,8 @@
     "lint:app:next-app1": "turbo run lint --filter=next-app1",
     "lint:app:next-app2": "turbo run lint --filter=next-app2",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "prepare":"husky install"
   },
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
@@ -34,6 +35,7 @@
   ],
   "devDependencies": {
     "eslint-config-custom": "latest",
+    "husky": "^8.0.1",
     "pre-commit": "^1.2.2",
     "prettier": "latest",
     "turbo": "latest"
