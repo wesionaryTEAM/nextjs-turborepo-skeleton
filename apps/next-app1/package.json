@@ -6,11 +6,12 @@
     "dev": "node dev-serve.js",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint *.ts* --fix"
+    "lint": "eslint *.ts* --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
   },
   "dependencies": {
     "config": "*",
-    "next": "12.1.6",
+    "next": "^12.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tsconfig": "*",

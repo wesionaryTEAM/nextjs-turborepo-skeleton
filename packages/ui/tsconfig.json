@@ -1,5 +1,9 @@
 {
   "extends": "tsconfig/nextjs.json",
-  "include": ["."],
+  "include": [
+    ".",
+    "../config/tailwind.config.js",
+    "../config/postcss.config.js"
+  ],
   "exclude": ["dist", "build", "node_modules"]
 }
