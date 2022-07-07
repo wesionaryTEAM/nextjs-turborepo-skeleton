@@ -13,8 +13,8 @@
     "app:owner": "turbo run dev --filter=owner",
     "lint": "turbo run lint",
     "lint-staged": "lint-staged",
-    "lint:app:consumer": "turbo run lint --filter=consumer",
-    "lint:app:owner": "turbo run lint --filter=owner",
+    "lint:consumer": "turbo run lint --filter=consumer",
+    "lint:owner": "turbo run lint --filter=owner",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "clean": "turbo run clean && rm -rf node_modules"
   },
