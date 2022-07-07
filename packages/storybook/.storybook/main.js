@@ -14,9 +14,7 @@ module.exports = {
         backgrounds: false,
       },
     },
-    '@storybook/addon-essentials',
     '@storybook/addon-storysource',
-    'storybook-addon-themes',
     'storybook-addon-themes',
     'storybook-addon-theme-changer',
     {
