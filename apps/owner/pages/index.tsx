@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Button } from 'ui'
 import { Header } from '../components/organism'
 
-const Home: NextPage = () => (
+const Home = () => (
   <div>
     <Head>
       <title>Create Next App</title>
