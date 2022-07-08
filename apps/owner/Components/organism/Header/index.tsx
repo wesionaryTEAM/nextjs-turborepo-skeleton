@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ThemeContext } from 'ui'
 import { Themes } from 'ui/Themes/themeIndex'
 
-export const Header = () => {
+const Header = () => {
   const { setTheme } = useContext(ThemeContext)
   return (
     <div className="navbar bg-base-200">
@@ -117,3 +117,5 @@ export const Header = () => {
     </div>
   )
 }
+
+export default Header

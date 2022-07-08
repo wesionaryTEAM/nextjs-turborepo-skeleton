@@ -3,9 +3,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Button } from 'ui'
-import { Header } from '../Components/organism'
+import { Header } from '../components/organism'
 
-const Home: NextPage = () => (
+const Home = () => (
   <div>
     <Head>
       <title>Create Next App</title>
