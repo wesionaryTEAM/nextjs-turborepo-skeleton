@@ -13,6 +13,15 @@
     "clean": {
       "cache": false
     },
+    "cypress:open": {
+      "cache": false
+    },
+    "cypress:run": {
+      "cache": false
+    },
+    "e2e:open": {
+      "cache": false
+    },
     "deploy": {
       "dependsOn": ["lint"],
       "outputs": []

@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint *.ts* --fix",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "e2e:open": "start-server-and-test 'yarn dev' 8001 'yarn cypress:open'",
+    "e2e:run": "start-server-and-test 'yarn dev' 8001 'yarn cypress:run'"
   },
   "dependencies": {
     "config": "*",
@@ -21,6 +25,7 @@
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
+    "cypress": "^10.3.0",
     "dotenv": "^16.0.1",
     "eslint": "^8.18.0",
     "next-transpile-modules": "^9.0.0",

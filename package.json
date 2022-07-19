@@ -16,7 +16,14 @@
     "lint:consumer": "turbo run lint --filter=consumer",
     "lint:owner": "turbo run lint --filter=owner",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo run clean && rm -rf node_modules"
+    "clean": "turbo run clean && rm -rf node_modules",
+    "cypress:open": "turbo run cypress:open",
+    "cypress:run": "turbo run cypress:run",
+    "e2e:open": "turbo run e2e:open",
+    "cypress:consumer": "turbo run cypress:open --filter=consumer",
+    "cypress:owner": "turbo run cypress:open --filter=owner",
+    "e2e:consumer": "turbo run e2e:open --filter=consumer",
+    "e2e:owner": "turbo run e2e:open --filter=owner"
   },
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
