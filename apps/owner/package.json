@@ -10,8 +10,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "e2e:open": "start-server-and-test 'yarn dev' 'yarn cypress:open'",
-    "e2e:run": "start-server-and-test dev  cypress:run"
+    "e2e:open": "start-server-and-test 'yarn dev' 8002 'yarn cypress:open'",
+    "e2e:run": "start-server-and-test 'yarn dev' 8002 'yarn cypress:run'"
   },
   "dependencies": {
     "config": "*",

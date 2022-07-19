@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint *.ts* --fix",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "e2e:open": "start-server-and-test 'yarn dev' 8001 'yarn cypress:open'",
+    "e2e:run": "start-server-and-test 'yarn dev' 8001 'yarn cypress:run'"
   },
   "dependencies": {
     "config": "*",
