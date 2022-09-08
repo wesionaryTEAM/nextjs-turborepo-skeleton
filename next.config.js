@@ -1,11 +1,6 @@
-const withTM = require('next-transpile-modules')(['ui'], {
-  resolveSymlinks: false,
-})
-const { i18n } = require('./next-i18next.config')
-
+const withTM = require('next-transpile-modules')(['ui'])
 module.exports = withTM({
   reactStrictMode: true,
-  i18n,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -13,4 +8,5 @@ module.exports = withTM({
     })
     return config
   },
+  distDir: 'build',
 })

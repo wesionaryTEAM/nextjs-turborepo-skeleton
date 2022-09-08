@@ -9,6 +9,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "consumer": "turbo run dev --scope=consumer",
+    "owner": "turbo run dev --scope=owner",
     "app:consumer": "turbo run dev --filter=consumer",
     "app:owner": "turbo run dev --filter=owner",
     "lint": "turbo run lint",
@@ -43,7 +45,9 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "lint-staged": "^13.0.3"
+    "@svgr/webpack": "^6.3.1",
+    "lint-staged": "^13.0.3",
+    "next-i18next": "^12.0.1"
   },
   "packageManager": "yarn@1.22.18"
 }
