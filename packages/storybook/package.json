@@ -30,7 +30,7 @@
     "tsconfig": "*",
     "typescript": "^4.5.4",
     "ui": "*",
-    "vite": "^2.9.9"
+    "vite": "^2.9.16"
   },
   "dependencies": {
     "@storybook/theming": "^6.5.9"
